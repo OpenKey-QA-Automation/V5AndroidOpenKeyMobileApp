@@ -1,0 +1,80 @@
+environments:
+  - type: dev
+    name: OpenKeyMobileApp
+    description: OpenKeyMobileApp
+    endpoints:
+      - name: OpenKeyAndroidApplication
+        description: custom OpenKeyAndroidApplication endpoint to intitate session with custom configuration
+        type: selenium
+        credentials: appcenter
+        URL: 'https://appcenter.ms/users/mrajgor-openkey/apps/OpenKeyDevDebug-Android'
+        Capabilities_Android:
+          appium_url: 'http://localhost:4723/wd/hub'
+          desired_capabilities:
+            device: ZY22DSLQJ9
+            os_version: 11.0
+            app_url: 'bs://33ccec19c788f970b360a84a9332a1dde1e94227'
+            app_package: 'com.openkey.guest'
+            app_activity: 'com.openkey.guest.ui.activities.LauncherActivity'
+            fullReset: true
+            noReset: false
+            orientation: PORTRAIT
+            browserstack.appium_version: 1.19.1
+            real_mobile: "true"
+          type: Android
+      - name: OpenKeyiOSApplication
+          description: custom OpenKeyiOSApplication endpoint to intitate session with custom configuration
+          credentials: appcenter
+          URL: 'https://appcenter.ms/users/mrajgor-openkey/apps/OpenKeyDevDebug-iOS'
+          Capabilities_iOS:
+          appium_url: 'http://localhost:4723/wd/hub'
+          desired_capabilities:
+            device: iPhone 11
+            os_version: 15.5
+            fullReset: true
+            noReset: false
+            orientation: PORTRAIT
+            browserstack.appium_version: 1.19.1
+            real_mobile: true
+          type: ios
+    credentials:
+      - id: appcenter
+        type: basic
+        username: mrajgor-openkey
+        password: Openkey01
+    variables: we can fetch otp by login to given email account
+      country_code: '1'
+      mobile_number: '9728278466'
+      email_address: 'openkey.dev1@mail.com'
+      email_password: 'Openkey01'
+      live_mobilenumber: '2145552222'
+      static_verificationCode: '55555555'
+    selectors:
+      - group: GuestAppLoginAndroid
+        name: GuestAppLoginAndroid
+        selectors:
+          OkGuestAndroidApp Login Screen: ''
+          OkGuestAndroidApp UUID Listbox: ''
+          OkGuestAndroidApp Select Country Code: ''
+          OkGuestAndroidApp Enter Mobile Number Field: ''
+          OkGuestAndroidApp Sign-In Button: ''
+          OkGuestAndroidApp Enter Verification Code Screen: ''
+          OkGuestAndroidApp Enter Verification Code Field: ''
+          OkGuestAndroidApp Get the Key button: ''
+          OkGuestAndroidApp Downloading Key Screen: ''
+          OkGuestAndroidApp My Key Screen: ''
+        - group: GuestAppLoginiOS
+          name: GuestAppLoginiOS
+          selectors:
+            OkGuestiOSApp Login Screen: ''
+            OkGuestiOSApp UUID Listbox: ''
+            OkGuestiOSApp Select Country Code: ''
+            OkGuestiOSApp Enter Mobile Number Field: 'By.id("com.openkey.guest:id/txtMsg")'
+            OkGuestiOSApp Sign-In Button: ''
+            OkGuestiOSApp Enter Verification Code Screen: ''
+            OkGuestiOSApp Enter Verification Code Field: ''
+            OkGuestiOSApp Get the Key button: ''
+            OkGuestiOSApp Downloading Key Screen: ''
+            OkGuestiOSApp My Key Screen: ''
+
+
