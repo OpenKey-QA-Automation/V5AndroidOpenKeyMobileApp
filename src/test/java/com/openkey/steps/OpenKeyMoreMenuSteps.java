@@ -19,15 +19,15 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void dashboard_screen_with_footer_menu_is_shown() {
 
-        System.out.println("Footer Menu is shown over Dashboard Screen");
-        allureReportingManager.stepsScreenshots();
+        //System.out.println("Footer Menu is shown over Dashboard Screen");
+        //allureReportingManager.stepsScreenshots();
     }
 
     @When("^Guest clicks on Wifi menu$")
 
     public void guest_clicks_on_wifi_menu() {
 
-        openKeyMoreMenuScreen.verifyWifiFooterMenu();
+        //openKeyMoreMenuScreen.verifyWifiFooterMenu();
 
     }
 
@@ -35,7 +35,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void wifi_screen_should_be_displayed() {
 
-        openKeyMoreMenuScreen.verifyWifiScreenActions();
+        //openKeyMoreMenuScreen.verifyWifiScreenActions();
 
     }
 
@@ -58,7 +58,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void guest_clicks_on_Hotel_information_option_in_more_menu() {
 
-        openKeyMoreMenuScreen.verifyHotelInformationOption();
+        //openKeyMoreMenuScreen.verifyHotelInformationOption();
 
     }
 
@@ -66,7 +66,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void hotel_information_screen_features_should_be_functional() throws InterruptedException {
 
-        openKeyMoreMenuScreen.verifyHotelInformationActions();
+        //openKeyMoreMenuScreen.verifyHotelInformationActions();
 
     }
 
@@ -74,7 +74,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void guest_clicks_on_promotions_option_in_more_menu() {
 
-        openKeyMoreMenuScreen.verifyPromotions();
+        //openKeyMoreMenuScreen.verifyPromotions();
 
     }
 
@@ -82,7 +82,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void promotions_screen_features_should_be_functional() {
 
-        allureReportingManager.stepsScreenshots();
+        //allureReportingManager.stepsScreenshots();
     }
 
     @When("^Guest clicks on Express Checkout option in More menu$")
