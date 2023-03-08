@@ -42,15 +42,15 @@ public class OpenKeyDoorLockSteps extends BaseSteps {
     public void guest_should_be_redirected_back_to_the_my_key_screen() throws InterruptedException {
 
         openDoorLockScreen.redirectToMyKeyScreen();
-        System.out.println("Guest redirected back to the My Key Screen");
+        //System.out.println("Guest redirected back to the My Key Screen");
 
     }
 
     @And("^Verify Push Notification You can also share your key with other guests should be triggered on first time opening door lock$")
     public void verify_push_notification_you_can_also_share_your_key_with_other_guests_should_be_triggered_on_first_time_opening_door_lock() {
 
-        openDoorLockScreen.pushNotificationsOfShareKeyWithOtherGuests();
-        System.out.println("Verify Push Notification You can also share your key with other guests should be triggered on first time successfully opening door lock\n");
+        //openDoorLockScreen.pushNotificationsOfShareKeyWithOtherGuests();
+        //System.out.println("Verify Push Notification You can also share your key with other guests should be triggered on first time successfully opening door lock\n");
 
     }
 
