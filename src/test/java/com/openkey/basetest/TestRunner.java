@@ -16,7 +16,7 @@ import java.sql.SQLException;
 @CucumberOptions(
     monochrome = true,
     //tags = "@WelcomeMessageAndroidApp or @LaunchOpenKeyAndroidApp or @LoginToOpenKeyAndroidApp or @DownloadMobileKey",
-    tags = "not @OpenKeyDoorLockInOfflineModeAndroidApp and not @LoginToHostPortal and not @SessionCreateInHostPortal and not @SessionDeleteInHostPortal and not @SessionDeletedScenarioInApp",
+    tags = "not @MoreMenuAndroidApp",
     features = "src/main/com.openkey.resources/features",
     glue = {"com.openkey.steps", "com.openkey.reporting"},
     publish = true,
