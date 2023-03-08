@@ -38,8 +38,8 @@ public class OpenKeyHamburgerMenuScreen extends BaseScreen {
     By logoTwitter = By.id("com.twitter.android:id/header_title");
 
     By txtTwitterJoin = By.xpath("//android.widget.TextView [contains(@text,'Twitter')]");
-    By wifiIcon = By.xpath("//android.widget.TextView [contains(@text, 'WiFi')]");
-    //By wifiIcon = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.ScrollView/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[5]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[6]/android.widget.ImageView");
+    //By wifiIcon = By.xpath("//android.widget.TextView [contains(@text, 'WiFi')]");
+    By wifiIcon = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.ScrollView/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[5]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[6]/android.widget.TextView");
      //By wifiIcon = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.ScrollView/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[6]/android.widget.ImageView");
     By announceHeader = By.xpath("//android.widget.TextView[contains(@text, 'Announcements')]");
     By highlightHeader = By.xpath("//android.widget.TextView[contains(@text, 'Highlights')]");
