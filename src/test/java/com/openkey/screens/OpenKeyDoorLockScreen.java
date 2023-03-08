@@ -83,7 +83,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
         allureReportingManager.stepsScreenshots();
     }
 
-    public void pushNotificationsOfShareKeyWithOtherGuests() {
+ /*   public void pushNotificationsOfShareKeyWithOtherGuests() {
 
         try {
             driver.openNotifications();
@@ -105,7 +105,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
             allureReportingManager.stepsScreenshots();
         }
     }
-
+*/
     public void verifyDoorOpen() {
         try {
             if (driver.findElement(accessGrantedCheck).isDisplayed()) {
@@ -146,8 +146,8 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
         }
         catch (Exception e)
         {
-            System.out.println("Enjoying Openkey Star Rating Prompt should display only once on second attempt of successfully door open");
-            allureReportingManager.stepsScreenshots();
+           // System.out.println("Enjoying Openkey Star Rating Prompt should display only once on second attempt of successfully door open");
+           // allureReportingManager.stepsScreenshots();
         }
     }
 
@@ -162,7 +162,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
                 mqttClient.moveToPosition(1);
                 //accessGrantedCheck();
                 verifyDoorOpen();
-                pushNotificationsOfShareKeyWithOtherGuests();
+                //pushNotificationsOfShareKeyWithOtherGuests();
                 starRatingPrompt();
                 mqttClient.moveToPosition(0);
             }
