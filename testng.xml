@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="OpenKey Mobile App Automation">
+
+    <listeners>
+        <listener class-name="com.openkey.setups.ListenersManager"/>
+    </listeners>>
+    <test verbose="2" preserve-order="true" name="GuestLoginTest">
+        <classes>
+<!--            <class name="com.openkey.steps.OpenKeyLaunchAppSteps">-->
+<!--                <methods>-->
+<!--                    <include name="setupSteps"/>-->
+<!--                    <include name="LaunchOpenKeyApp"/>-->
+<!--                    <include name="allowNotification"/>-->
+<!--                    <include name="mobileScreen"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+            <class name="com.openkey.basetest.TestRunner"></class>
+        </classes>
+    </test>
+</suite>
+
+
