@@ -7,7 +7,7 @@ desired_capabilities:
       appActivity: com.openkey.guest.MainActivity
       orientation: PORTRAIT
       type: Android
-      doorLockTotalCount: 100
+      doorLockTotalCount: 2
   -   device: iPhone 11
       os_version: 15.5
       appPackage: com.openkey.guest
