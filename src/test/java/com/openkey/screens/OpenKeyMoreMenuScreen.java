@@ -105,7 +105,7 @@ public class OpenKeyMoreMenuScreen extends BaseScreen {
         allureReportingManager.stepsScreenshots();
     }
 
-    public void verifyMoreMenuActions() {
+   /* public void verifyMoreMenuActions() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(btnMoreFooterMenu)).click();
         allureReportingManager.stepsScreenshots();
@@ -120,15 +120,15 @@ public class OpenKeyMoreMenuScreen extends BaseScreen {
         System.out.println("Promotions menu option is displayed");
         allureReportingManager.stepsScreenshots();
     }
-
-    public void verifyHotelInformationOption() {
+*/
+   /* public void verifyHotelInformationOption() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(listOptionHotelInfo)).click();
         System.out.println("Hotel Information menu option is selected");
         allureReportingManager.stepsScreenshots();
     }
-
-    public void verifyHotelInformationActions() throws InterruptedException {
+*/
+  /*  public void verifyHotelInformationActions() throws InterruptedException {
 
         Assert.assertEquals(wait.until(ExpectedConditions.visibilityOfElementLocated(facebookIcon)).isDisplayed(), true);
         System.out.println("Facebook icon is displayed over Hotel Information screen");
@@ -222,7 +222,7 @@ public class OpenKeyMoreMenuScreen extends BaseScreen {
         //driver.navigate().back();
         Thread.sleep(3000);
     }
-
+*/
     public void verifyPromotions() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(btnMoreFooterMenu)).click();
