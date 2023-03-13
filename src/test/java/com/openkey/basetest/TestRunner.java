@@ -73,7 +73,7 @@ public class TestRunner extends CapabilitiesManager {
 
         allureReport.envFileWriter();
         allureReport.executorFileWriter();
-        dataBaseHandler.setupConnection();
+        //dataBaseHandler.setupConnection();
     }
 
     @AfterClass(alwaysRun = true)
