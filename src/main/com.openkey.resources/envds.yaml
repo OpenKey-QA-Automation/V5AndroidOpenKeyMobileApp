@@ -1,7 +1,7 @@
 name: OpenKeyMobileApp
 environment: dev
 desired_capabilities:
-  -   device: 192.168.1.230:5555
+  -   device: 192.168.1.124:5557
       os_version: 13.0
       appPackage: com.openkey.guest
       appActivity: com.openkey.guest.MainActivity
