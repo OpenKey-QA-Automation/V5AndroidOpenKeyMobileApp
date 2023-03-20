@@ -154,7 +154,7 @@ public class CapabilitiesManager {
         capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
         // Start Session in Android Device
         final URL server = new URL("http://localhost:4723/wd/hub");
-        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "Assa_Rail/command", "Assa_Rail/response"); //Change based on rail
+        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "saltoRail/command", "saltoRail/response"); //Change based on rail
         driver = new AndroidDriver(server, capabilities);
 
 
