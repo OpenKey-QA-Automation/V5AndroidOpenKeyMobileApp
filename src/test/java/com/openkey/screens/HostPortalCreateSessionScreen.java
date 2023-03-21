@@ -18,12 +18,12 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
         By roomId = By.xpath("//input[contains(@formcontrolname,'hotel_room_id')]");
         //By roomId = By.id("mat-input-2");
         //By roomIdDropdown = By.id("mat-chip-list-input-0");
-        By roomIdDropdown = By.xpath("//span[@class='mat-option-text'][contains(.,'547')]"); //Programmatically change
+        By roomIdDropdown = By.xpath("//span[@class='mat-option-text'][contains(.,'100')]"); //Programmatically change
         By createNewSessionBtn = By.xpath("//span[@class='mat-button-wrapper'][contains(.,'Create New Session')]");
 
         By sessionCreatedToaster = By.xpath("(//span[@data-notify='message'][contains(.,'Session created for guest')])[2]");
         By guestNameAdded= By.xpath("//a[@class='mr-1'][contains(.,'Aaron')]"); //Programmatically change
-        By guestMobileNumberAdded= By.xpath("//mat-card-subtitle[@class='mat-card-subtitle'][contains(.,'+14695450806')]"); //Programmatically change
+        By guestMobileNumberAdded= By.xpath("//mat-card-subtitle[@class='mat-card-subtitle'][contains(.,'+14696661173')]"); //Programmatically change
 
 
     public HostPortalCreateSessionScreen(AndroidDriver driver) {
@@ -48,7 +48,7 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
             //Thread.sleep(2000);
             allureReportingManager.stepsScreenshots();
             wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).sendKeys("4695450806");//Programmatically change
+            wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).sendKeys("4696661173");//Programmatically change
             driver.hideKeyboard();
             allureReportingManager.stepsScreenshots();
             //Thread.sleep(3000);
@@ -57,8 +57,8 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
             System.out.println("Search Button clicked");
             allureReportingManager.stepsScreenshots();
             //Thread.sleep(3000);
-            wait.until(ExpectedConditions.elementToBeClickable(roomId)).sendKeys("547");//Programmatically change
-           // wait.until(ExpectedConditions.visibilityOfElementLocated(roomId)).sendKeys("547");//Programmatically change
+            wait.until(ExpectedConditions.elementToBeClickable(roomId)).sendKeys("100");//Programmatically change
+           // wait.until(ExpectedConditions.visibilityOfElementLocated(roomId)).sendKeys("100");//Programmatically change
             Thread.sleep(3000);
             //wait.until(ExpectedConditions.visibilityOfElementLocated(roomIdDropdown)).click();
             wait.until(ExpectedConditions.elementToBeClickable(roomIdDropdown)).click();
