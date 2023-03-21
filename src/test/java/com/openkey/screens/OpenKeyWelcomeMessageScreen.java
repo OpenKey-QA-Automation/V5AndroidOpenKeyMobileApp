@@ -81,7 +81,7 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
         {
             System.out.println("OpenKey app is not installed in the device");
             allureReportingManager.stepsScreenshots();
-            new TouchAction(driver).tap(PointOption.point(x, y)).perform();
+           // new TouchAction(driver).tap(PointOption.point(x, y)).perform();
             Assert.assertEquals(wait.until(ExpectedConditions.visibilityOfElementLocated(screenOpenkeyPlayStore)).getText(), "OpenKey");
             System.out.println("OpenKey app download link navigates to Play Store, Click on Install button to install the latest build");
             allureReportingManager.stepsScreenshots();
