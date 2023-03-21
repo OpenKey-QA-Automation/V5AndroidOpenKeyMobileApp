@@ -16,7 +16,7 @@ import static com.openkey.setups.CapabilitiesManager.allureReportingManager;
 
 public class OpenKeyWelcomeMessageScreen extends BaseScreen {
 
-    By welcomeMessageBody = By.xpath("//android.widget.TextView[contains(@text,'a mobile key is waiting for you')]");
+    By welcomeMessageBody = By.xpath("//android.widget.TextView[2][contains(@text,'a mobile key is waiting for you')]");
     //By txtWlcmMsg= By.id("android:id/message_text");
     By txtWlcmMsg= By.id("android:id/inbox_text0");
     By screenOpenkeyPlayStore= By.xpath("//android.widget.TextView[contains(@text,'OpenKey')]");
