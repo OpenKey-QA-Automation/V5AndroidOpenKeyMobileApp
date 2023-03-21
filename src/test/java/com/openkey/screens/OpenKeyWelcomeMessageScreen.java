@@ -20,6 +20,7 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
     //By welcomeMessageBody = By.xpath("//android.widget.TextView[contains(@text,'a mobile key is waiting for you')]");
     //By txtWlcmMsg= By.id("android:id/message_text");
     By txtWlcmMsg= By.id("android:id/inbox_text0");
+    By inConversationLink = By.id("com.vocalocity.Administration:id/in_conversation_link_preview_info_container);
     By screenOpenkeyPlayStore= By.xpath("//android.widget.TextView[contains(@text,'OpenKey')]");
     By btnInstallOpenKeyPlayStore= By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[1]/android.view.View[5]/android.widget.Button");//Change xpath
     By txtUpdateAvailable= By.id("com.openkey.guest:id/description");
@@ -57,14 +58,16 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
 
     public void verifyAppLanuchFrmDownloadLink() throws InterruptedException {
 
-        String appdownlodLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody)).getText().split("Download the app here")[1];
+      /*  String appdownlodLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody)).getText().split("Download the app here")[1];
         System.out.println("OpenKey App Download link is :" + appdownlodLink);
         WebElement embedDownloadLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody));
 
         Point point = embedDownloadLink.getLocation();
         int x = point.x + 1;
         int y = point.y + embedDownloadLink.getSize().getHeight() - 1;
-
+*/
+        
+        wait.until(ExpectedConditions.visibilityOfElementLocated(inConversationLink)).click();
         if (driver.isAppInstalled("com.openkey.guest")) {
             System.out.println("OpenKey app is already installed in device");
             allureReportingManager.stepsScreenshots();
