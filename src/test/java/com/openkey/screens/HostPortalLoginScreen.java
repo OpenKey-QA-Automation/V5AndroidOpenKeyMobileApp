@@ -84,7 +84,7 @@ public class HostPortalLoginScreen extends BaseScreen {
         System.out.println("Enter User Credentials");
         allureReportingManager.stepsScreenshots();
         wait.until(ExpectedConditions.visibilityOfElementLocated(userName)).sendKeys("openkey.automation+548Salto@gmail.com");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(password)).sendKeys(" Openkey01!");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(password)).sendKeys("Openkey01!");
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInBtn)).click();
         allureReportingManager.stepsScreenshots();
         System.out.println("User Login to Host Portal");
