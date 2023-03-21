@@ -16,8 +16,8 @@ import static com.openkey.setups.CapabilitiesManager.allureReportingManager;
 
 public class OpenKeyWelcomeMessageScreen extends BaseScreen {
 
-    By welcomeMessageBody = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView[2]");
-    //By welcomeMessageBody = By.xpath("//android.widget.TextView[contains(@text,'a mobile key is waiting for you')]");
+    //By welcomeMessageBody = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.viewpager.widget.ViewPager/android.widget.FrameLayout/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView[2]");
+    By welcomeMessageBody = By.xpath("//android.widget.TextView[contains(@text,'a mobile key is waiting for you')]");
     //By txtWlcmMsg= By.id("android:id/message_text");
     By txtWlcmMsg= By.id("android:id/inbox_text0");
     By screenOpenkeyPlayStore= By.xpath("//android.widget.TextView[contains(@text,'OpenKey')]");
