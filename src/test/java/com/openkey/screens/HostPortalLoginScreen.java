@@ -23,6 +23,7 @@ public class HostPortalLoginScreen extends BaseScreen {
     By userName = By.id("email");
     By password = By.id("password");
     By signInBtn = By.xpath("//div/button[contains(text(), 'Sign In')]");
+    By useWithoutAccount = By.id("com.android.chrome:id/signin_fre_dismiss_button");
     By notificationContinue = By.id("com.android.chrome:id/positive_button");
     By permissionAccept = By.id("com.android.permissioncontroller:id/permission_allow_button");
 
@@ -74,6 +75,7 @@ public class HostPortalLoginScreen extends BaseScreen {
 
         Thread.sleep(3000);
         System.out.println("Accept Chrome Notifications");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(useWithoutAccount)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(notificationContinue)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(permissionAccept)).click();
         driver.context("WEBVIEW_chrome");
