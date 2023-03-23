@@ -75,10 +75,10 @@ public class HostPortalLoginScreen extends BaseScreen {
 
         Thread.sleep(3000);
         System.out.println("Accept Chrome Notifications");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(useWithoutAccount)).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(notificationContinue)).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(permissionAccept)).click();
-        driver.context("WEBVIEW_chrome");
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(useWithoutAccount)).click();
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(notificationContinue)).click();
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(permissionAccept)).click();
+//         driver.context("WEBVIEW_chrome");
         System.out.println("The login page of host portal opens");
         allureReportingManager.stepsScreenshots();
         System.out.println("Accept Cookies");
