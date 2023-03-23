@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.SessionId;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.io.IOException;
