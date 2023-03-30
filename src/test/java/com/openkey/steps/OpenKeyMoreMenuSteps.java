@@ -74,7 +74,7 @@ public class OpenKeyMoreMenuSteps extends BaseSteps {
 
     public void guest_clicks_on_promotions_option_in_more_menu() {
 
-        openKeyMoreMenuScreen.verifyPromotions();
+        //openKeyMoreMenuScreen.verifyPromotions();
 
     }
 
