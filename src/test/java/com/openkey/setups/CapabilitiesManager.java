@@ -161,7 +161,7 @@ public class CapabilitiesManager {
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         // Start Session in Android Device
         final URL server = new URL("http://localhost:4723/wd/hub");
-        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "saltoRail/command", "saltoRail/response"); //Change based on rail
+        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "Salto1/command", "Salto1/response"); //Change based on rail
         driver = new AndroidDriver(server, capabilities);
 
 
