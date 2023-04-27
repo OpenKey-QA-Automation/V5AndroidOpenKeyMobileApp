@@ -23,7 +23,7 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
 
         By sessionCreatedToaster = By.xpath("(//span[@data-notify='message'][contains(.,'Session created for guest')])[2]");
         By guestNameAdded= By.xpath("//a[@class='mr-1'][contains(.,'Aaron')]"); //Programmatically change
-        By guestMobileNumberAdded= By.xpath("//mat-card-subtitle[@class='mat-card-subtitle'][contains(.,'+14696661173')]"); //Programmatically change
+        By guestMobileNumberAdded= By.xpath("//mat-card-subtitle[@class='mat-card-subtitle'][contains(.,'+14695450806')]"); //Programmatically change
 
 
     public HostPortalCreateSessionScreen(AndroidDriver driver) {
@@ -48,7 +48,7 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
             //Thread.sleep(2000);
             allureReportingManager.stepsScreenshots();
             wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).sendKeys("4696661173");//Programmatically change
+            wait.until(ExpectedConditions.visibilityOfElementLocated(phoneNumberForSearch)).sendKeys("4695450806");//Programmatically change
             driver.hideKeyboard();
             allureReportingManager.stepsScreenshots();
             //Thread.sleep(3000);
