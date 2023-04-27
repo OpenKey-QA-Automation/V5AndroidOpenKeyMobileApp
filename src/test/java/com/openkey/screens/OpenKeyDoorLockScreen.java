@@ -37,7 +37,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
 
     /**Actions*/
     public void openMainDoorLock() throws InterruptedException {
-        mqttClient.moveToPosition(1);
+        mqttClient.moveToPosition(3);
         wait.until(ExpectedConditions.visibilityOfElementLocated(mainDoorKey)).click();
         allureReportingManager.stepsScreenshots();
     }
@@ -159,7 +159,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
             {
                 Thread.sleep(5000);
                 openMainDoorLock();
-                mqttClient.moveToPosition(1);
+                mqttClient.moveToPosition(3);
                 //accessGrantedCheck();
                 verifyDoorOpen();
                 //pushNotificationsOfShareKeyWithOtherGuests();
