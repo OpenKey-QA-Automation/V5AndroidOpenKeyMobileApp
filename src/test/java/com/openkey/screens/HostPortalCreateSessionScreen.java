@@ -22,7 +22,7 @@ public class HostPortalCreateSessionScreen extends BaseScreen {
         By createNewSessionBtn = By.xpath("//span[@class='mat-button-wrapper'][contains(.,'Create New Session')]");
 
         By sessionCreatedToaster = By.xpath("(//span[@data-notify='message'][contains(.,'Session created for guest')])[2]");
-        By guestNameAdded= By.xpath("//a[@class='mr-1'][contains(.,'Aaron')]"); //Programmatically change
+        By guestNameAdded= By.xpath("//a[@class='mr-1'][contains(.,'SaltoOne')]"); //Programmatically change
         By guestMobileNumberAdded= By.xpath("//mat-card-subtitle[@class='mat-card-subtitle'][contains(.,'+14695450806')]"); //Programmatically change
 
 
