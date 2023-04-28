@@ -20,7 +20,7 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
     By welcomeMessageBody = By.xpath("//android.widget.TextView[contains(@text,'a mobile key is waiting for you')]");
     By txtWlcmMsg= By.id("android:id/message_text");
    // By txtWlcmMsg= By.id("android:id/inbox_text0");
-    By inConversationLink = By.id("com.vocalocity.Administration:id/in_conversation_link_preview_info_container");
+    
     By screenOpenkeyPlayStore= By.xpath("//android.widget.TextView[contains(@text,'OpenKey')]");
     By btnInstallOpenKeyPlayStore= By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View[1]/android.view.View[5]/android.widget.Button");//Change xpath
     By txtUpdateAvailable= By.id("com.openkey.guest:id/description");
@@ -67,7 +67,7 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
         int y = point.y + embedDownloadLink.getSize().getHeight() - 1;
 
         
-        wait.until(ExpectedConditions.visibilityOfElementLocated(inConversationLink)).click();
+       
         if (driver.isAppInstalled("com.openkey.guest")) {
             System.out.println("OpenKey app is already installed in device");
             allureReportingManager.stepsScreenshots();
