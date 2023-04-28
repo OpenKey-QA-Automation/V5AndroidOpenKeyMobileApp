@@ -58,14 +58,14 @@ public class OpenKeyWelcomeMessageScreen extends BaseScreen {
 
     public void verifyAppLanuchFrmDownloadLink() throws InterruptedException {
 
-      /*  String appdownlodLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody)).getText().split("Download the app here")[1];
+        String appdownlodLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody)).getText().split("Download the app here")[1];
         System.out.println("OpenKey App Download link is :" + appdownlodLink);
         WebElement embedDownloadLink = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessageBody));
 
         Point point = embedDownloadLink.getLocation();
         int x = point.x + 1;
         int y = point.y + embedDownloadLink.getSize().getHeight() - 1;
-*/
+
         
         wait.until(ExpectedConditions.visibilityOfElementLocated(inConversationLink)).click();
         if (driver.isAppInstalled("com.openkey.guest")) {
