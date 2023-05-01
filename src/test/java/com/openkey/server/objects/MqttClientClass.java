@@ -187,6 +187,11 @@ public class MqttClientClass {
                 break;
             case 3: setPosition(3);
                 break;
+            case 4: setPosition(4);
+                break;
+            case 5: setPosition(5);
+                break;
+            case 6: setPosition(6);
         }
     }
 }
