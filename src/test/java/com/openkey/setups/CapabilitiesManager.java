@@ -155,7 +155,7 @@ public class CapabilitiesManager {
         
         // Start Session in Android Device
         final URL server = new URL("http://localhost:4723/wd/hub");
-        mqttClient = new MqttClientClass("tcp://192.168.1.214:5565", "DRK4/command", "DRK4/response"); //Change based on rail
+        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "DRK4/command", "DRK4/response"); //Change based on rail
         driver = new AndroidDriver(server, capabilities);
 
 
