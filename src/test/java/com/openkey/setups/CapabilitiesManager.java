@@ -143,18 +143,19 @@ public class CapabilitiesManager {
 
 
         //capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
-        capabilities.setCapability("appPackage", "com.android.chrome");
+        //capabilities.setCapability("appPackage", "com.android.chrome");
         //capabilities.setCapability("appActivity", "com.google.android.apps.chrome.IntentDispatcher");
-        capabilities.setCapability("appActivity", "com.google.android.apps.chrome.Main");
+        //capabilities.setCapability("appActivity", "com.google.android.apps.chrome.Main");
         //capabilities.setCapability("intentAction", "android.intent.action.LAUNCHER");
         //capabilities.setCapability("intentCategory", "android.intent.category.MAIN");
-        capabilities.setCapability("chromedriverExecutableDir", "chromedriver/chromedriver.exe");
-        capabilities.setCapability("chromedriver_autodownload", "C://OpenKey Programs//OpenKeyMobileApp//chromedriver");
+        //capabilities.setCapability("chromedriverExecutableDir", "chromedriver/chromedriver.exe");
+        //capabilities.setCapability("chromedriver_autodownload", "C://OpenKey Programs//OpenKeyMobileApp//chromedriver");
         //capabilities.setCapability("chromedriverExecutableDir", "C:\\OpenKey Programs\\OpenKeyMobileApp\\chromedriver\\chromedriver.exe");
-        capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
+        //capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
+        
         // Start Session in Android Device
         final URL server = new URL("http://localhost:4723/wd/hub");
-        mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "Assa_Rail/command", "Assa_Rail/response"); //Change based on rail
+        mqttClient = new MqttClientClass("tcp://192.168.1.214:5565", "DRK4/command", "DRK4/response"); //Change based on rail
         driver = new AndroidDriver(server, capabilities);
 
 
@@ -167,10 +168,10 @@ public class CapabilitiesManager {
         // Use a higher value if your mobile elements take time to show up
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        System.out.println("Browser Launched");
+        //System.out.println("Browser Launched");
         //driver.startActivity(new Activity("com.android.chrome", "com.google.android.apps.chrome.Main"));
-        driver.get("https://host.openkey.co/login");
-        System.out.println("Host portal login link is opened");
+        //driver.get("https://host.openkey.co/login");
+        //System.out.println("Host portal login link is opened");
 
        /* // Initialize the remote Webdriver using BrowserStack remote URL access credentials and desired capabilities defined above
         driver = new AndroidDriver(new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub"), capabilities);
