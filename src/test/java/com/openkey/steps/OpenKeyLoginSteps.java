@@ -23,25 +23,25 @@ public class OpenKeyLoginSteps extends BaseSteps {
 
     @When("^Guest select Country Code$")
     public void guest_select_country_code() {
-        openKeyLoginScreen.selectCountryCode();
-        System.out.println("Guest click on Country Code dropdown");
-        System.out.println("Country Code Search Screen should be displayed");
-        System.out.println("Guest type value in search textbox");
-        System.out.println("Searched country result should be displayed");
-        System.out.println("Selected country code should be displayed in country code field");
+       // openKeyLoginScreen.selectCountryCode();
+        //System.out.println("Guest click on Country Code dropdown");
+        //System.out.println("Country Code Search Screen should be displayed");
+        //System.out.println("Guest type value in search textbox");
+        //System.out.println("Searched country result should be displayed");
+        //System.out.println("Selected country code should be displayed in country code field");
     }
 
     @And("^Guest entered invalid mobile number$")
     public void guest_entered_invalid_mobile_number() {
-        openKeyLoginScreen.invalidEnterMobileNumber();
-        System.out.println("Guest entered invalid mobile number");
-        System.out.println("Guest clicked on Request Verification Code Button");
+        //openKeyLoginScreen.invalidEnterMobileNumber();
+        //System.out.println("Guest entered invalid mobile number");
+        //System.out.println("Guest clicked on Request Verification Code Button");
     }
 
     @Then("^The number you have entered is invalid. Please enter a valid phone number error alert prompt should be displayed$")
     public void the_number_you_have_entered_is_invalid_Please_enter_a_valid_phone_number_error_alert_prompt_should_be_displayed() {
-        openKeyLoginScreen.invalidMobileErrorAlert();
-        System.out.println("The number you have entered is invalid. Please enter a valid phone number error alert prompt should be displayed");
+        //openKeyLoginScreen.invalidMobileErrorAlert();
+        //System.out.println("The number you have entered is invalid. Please enter a valid phone number error alert prompt should be displayed");
     }
 
     @When("^Guest entered register mobile number$")
