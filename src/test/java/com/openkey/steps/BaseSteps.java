@@ -12,10 +12,7 @@ public class BaseSteps extends CapabilitiesManager {
     protected OpenKeyLoginScreen openKeyLoginScreen;
     protected OpenKeyDownloadMobileKeyScreen openKeyDownloadMobileKeyScreen;
     protected OpenKeyDoorLockScreen openDoorLockScreen;
-    protected OpenKeyMoreMenuScreen openKeyMoreMenuScreen;
     protected OpenKeyWelcomeMessageScreen openKeyWelcomeMessageScreen;
-    protected HostPortalLoginScreen hostPortalLogin;
-    protected HostPortalCreateSessionScreen hostPortalCreateSessionScreen;
     protected MqttClientClass mqttClient;
 
     public void setupScreens(AndroidDriver driver, MqttClientClass mqttClient) {
@@ -24,10 +21,7 @@ public class BaseSteps extends CapabilitiesManager {
         openKeyLoginScreen = new OpenKeyLoginScreen(driver, mqttClient);
         openKeyDownloadMobileKeyScreen = new OpenKeyDownloadMobileKeyScreen(driver, mqttClient);
         openDoorLockScreen = new OpenKeyDoorLockScreen(driver, mqttClient);
-        openKeyMoreMenuScreen = new OpenKeyMoreMenuScreen(driver, mqttClient);
         openKeyWelcomeMessageScreen = new OpenKeyWelcomeMessageScreen(driver, mqttClient);
-        hostPortalLogin = new HostPortalLoginScreen(driver);
-        hostPortalCreateSessionScreen = new HostPortalCreateSessionScreen(driver);
 
     }
 
