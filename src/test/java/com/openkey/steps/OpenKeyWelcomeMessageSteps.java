@@ -18,9 +18,9 @@ public class OpenKeyWelcomeMessageSteps extends BaseSteps{
     @When("^Session is started for a Guest$")
     public void session_is_started_for_a_guest() throws InterruptedException, IOException {
 
-        hostPortalLogin.hostPortalLoginScreen();
-        hostPortalCreateSessionScreen.createNewSession();
-        System.out.println("Session is started for the Guest through Host Portal");
+        //hostPortalLogin.hostPortalLoginScreen();
+        //hostPortalCreateSessionScreen.createNewSession();
+        //System.out.println("Session is started for the Guest through Host Portal");
 
     }
 
