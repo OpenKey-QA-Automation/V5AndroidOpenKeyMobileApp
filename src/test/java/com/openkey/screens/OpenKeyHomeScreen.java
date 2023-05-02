@@ -27,7 +27,7 @@ public class OpenKeyHomeScreen extends BaseScreen {
     /**Actions*/
     public void launchOpenKeyApp() {
         allureReportingManager.stepsScreenshots();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(btnOpenAppPlayStore)).click();
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(btnOpenAppPlayStore)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(openkeySplashLogo)).isDisplayed();
         allureReportingManager.stepsScreenshots();
 
