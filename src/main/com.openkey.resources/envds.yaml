@@ -1,5 +1,5 @@
 name: OpenKeyMobileApp
-environment: dev
+environment: prod
 desired_capabilities:
   -   device: 192.168.1.230:5555
       os_version: 13.0
