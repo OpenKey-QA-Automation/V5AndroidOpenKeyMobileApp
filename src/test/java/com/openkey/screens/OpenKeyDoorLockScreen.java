@@ -37,7 +37,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
 
     /**Actions*/
     public void openMainDoorLock() throws InterruptedException {
-        mqttClient.moveToPosition(2);
+        mqttClient.moveToPosition(1);
         wait.until(ExpectedConditions.visibilityOfElementLocated(mainDoorKey)).click();
         allureReportingManager.stepsScreenshots();
     }
