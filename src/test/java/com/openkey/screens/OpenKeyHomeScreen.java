@@ -41,10 +41,10 @@ public class OpenKeyHomeScreen extends BaseScreen {
             if(wait.until(ExpectedConditions.visibilityOfElementLocated(allowToSendNotifications)).isDisplayed()) {
                 allureReportingManager.stepsScreenshots();
                 wait.until(ExpectedConditions.visibilityOfElementLocated(allowToSendNotifications)).click();
-                if (wait.until(ExpectedConditions.visibilityOfElementLocated(allowAccessOfPhotos)).isDisplayed()) {
-                    allureReportingManager.stepsScreenshots();
-                    wait.until(ExpectedConditions.visibilityOfElementLocated(allowAccessOfPhotos)).click();
-                }
+//                 if (wait.until(ExpectedConditions.visibilityOfElementLocated(allowAccessOfPhotos)).isDisplayed()) {
+//                     allureReportingManager.stepsScreenshots();
+//                     wait.until(ExpectedConditions.visibilityOfElementLocated(allowAccessOfPhotos)).click();
+//                 }
             }
         }
     }
