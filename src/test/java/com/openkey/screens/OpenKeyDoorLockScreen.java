@@ -37,7 +37,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
 
     /**Actions*/
     public void openMainDoorLock() throws InterruptedException {
-        mqttClient.moveToPosition(1);
+        mqttClient.moveToPosition(3);
         wait.until(ExpectedConditions.visibilityOfElementLocated(mainDoorKey)).click();
         allureReportingManager.stepsScreenshots();
     }
@@ -106,7 +106,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
         }
     }
 */
-    public void verifyDoorOpen() {
+    public void verifyDoorOpen() throws InterruptedException{
         try {
             if (driver.findElement(accessGrantedCheck).isDisplayed()) {
                 accessGranted = wait.until(ExpectedConditions.visibilityOfElementLocated(accessGrantedCheck)).getText();
@@ -132,6 +132,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
                 allureReportingManager.stepsScreenshots();
             }
         }
+        mqttClient.moveToPosition(0);
     }
 
     public void starRatingPrompt() {
@@ -159,7 +160,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
             {
                 Thread.sleep(5000);
                 openMainDoorLock();
-                mqttClient.moveToPosition(1);
+                
                 //accessGrantedCheck();
                 verifyDoorOpen();
                 //pushNotificationsOfShareKeyWithOtherGuests();
