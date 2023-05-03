@@ -133,7 +133,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
                 allureReportingManager.stepsScreenshots();
             }
         }
-        mqttClient.moveToPosition(0);
+        mqttClient.moveToPosition(3);
     }
 
     public void starRatingPrompt() {
