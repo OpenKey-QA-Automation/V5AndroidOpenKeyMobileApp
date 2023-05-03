@@ -4,7 +4,7 @@ desired_capabilities:
   -   device: 192.168.1.214:5565
       os_version: 13.0
       appPackage: com.openkey.guest
-      appActivity: com.openkey.guest.MainActivity
+      appActivity: com.openkey.guest.ui.activities.LauncherActivity
       orientation: PORTRAIT
       type: Android
       doorLockTotalCount: 100
@@ -18,5 +18,7 @@ credentials:
   - id: appcenter
     username: mrajgor-openkey
     password: Openkey01
+
+
 
 
