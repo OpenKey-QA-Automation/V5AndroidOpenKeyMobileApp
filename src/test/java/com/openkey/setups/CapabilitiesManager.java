@@ -2,7 +2,7 @@ package com.openkey.setups;
 
 import com.google.common.collect.ImmutableMap;
 import com.openkey.reporting.AllureReportingManager;
-import com.openkey.server.objects.MqttClientClass;
+import com.openkey.mqtt.MqttClientClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -87,8 +87,8 @@ public class CapabilitiesManager {
         System.out.println("deviceType : " +platformName);
         System.out.println("platformVersion : " +platformVersion);
         /** Commented appPackage and appActivity because we've automated installing and launch app through app center*/
-       //System.out.println("appPackage : " +appPackage);
-       //System.out.println("appActivity : " +appActivity);
+        //System.out.println("appPackage : " +appPackage);
+        //System.out.println("appActivity : " +appActivity);
         System.out.println("orientation : " +orientation);
         System.out.println("lock counter : " +lockCounter);
 
@@ -98,8 +98,8 @@ public class CapabilitiesManager {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
         capabilities.setCapability(MobileCapabilityType.UDID, deviceName);
         /** Commented appPackage and appActivity because we've automated installing and launch app through app center*/
-        //capabilities.setCapability("appPackage", appPackage);
-        //capabilities.setCapability("appActivity", appActivity);
+        capabilities.setCapability("appPackage", appPackage);
+        capabilities.setCapability("appActivity", appActivity);
 
         /*//Set the DesiredCapabilities for OpenKey V5 Live-Debug App capabilities only for local attached device with system
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
@@ -121,7 +121,6 @@ public class CapabilitiesManager {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Motorola Moto G9 Play");
         capabilities.setCapability(MobileCapabilityType.APP, "bs://33ccec19c788f970b360a84a9332a1dde1e94227");
-
         // BrowserStack CapabilitiesManager Stop app, clear app data and uninstall apk before session starts and after test
         capabilities.setCapability(MobileCapabilityType.FULL_RESET, "true");
         capabilities.setCapability("browserstack.video", "true");*/
@@ -152,7 +151,7 @@ public class CapabilitiesManager {
         //capabilities.setCapability("chromedriver_autodownload", "C://OpenKey Programs//OpenKeyMobileApp//chromedriver");
         //capabilities.setCapability("chromedriverExecutableDir", "C:\\OpenKey Programs\\OpenKeyMobileApp\\chromedriver\\chromedriver.exe");
         //capabilities.setCapability("appium:chromeOptions", ImmutableMap.of("w3c", false));
-        
+
         // Start Session in Android Device
         final URL server = new URL("http://localhost:4723/wd/hub");
         mqttClient = new MqttClientClass("tcp://192.168.1.152:1883", "DRK4/command", "DRK4/response"); //Change based on rail
@@ -182,8 +181,8 @@ public class CapabilitiesManager {
     }
 
     @AfterTest
-        // Stop Appium Server
-        public void stopAppiumServer() {
+    // Stop Appium Server
+    public void stopAppiumServer() {
 
         Runtime runtime = Runtime.getRuntime();
         try {
@@ -204,24 +203,20 @@ public class CapabilitiesManager {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "ZY22DSLQJ9");
         capabilities.setCapability("appPackage", "com.openkey.newbury");
         capabilities.setCapability("appActivity", "com.openkey.whitelabels.ui.activities.LauncherActivity");
-
         // Set the DesiredCapabilities for React Native API Level App capabilities only for local attached device with system
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "ZY22DSLQJ9");
         capabilities.setCapability("appPackage", "com.openkey");
         capabilities.setCapability("appActivity", "com.openkey.MainActivity");
-
         //Start Appium Server - First Method not working (Using AppiumDriverLocalService)
         service = AppiumDriverLocalService.buildDefaultService();
         service.start();
-
         //Get URL where appium server hosted i.e 'http://127.0.0.1:4723/wd/hub'
         String service_url = service.getUrl().toString();
         System.out.println("Appium Service Address: " + service_url);
         driver = new AppiumDriver(new URL(service_url), capabilities);
         driver.manage().timeouts().wait(30);
-
         //Build the Appium service - Second Method not working (Using Build Service)
         AppiumServiceBuilder builder = new AppiumServiceBuilder();
         builder.usingDriverExecutable(new File("/usr/local/Cellar/node/18.5.0/bin/node"));
@@ -231,12 +226,10 @@ public class CapabilitiesManager {
         builder.withCapabilities(capabilities);
         builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
         builder.withArgument(GeneralServerFlag.LOG_LEVEL,"error");
-
         //Start the server with the builder
         service = AppiumDriverLocalService.buildService(builder);
         service.start();
         System.out.println("Appium Server Started");
-
         Start Appium Server - (Using Appium.js with Node.exe) - Working
         CommandLine cmd = new CommandLine("/usr/local/Cellar/node/18.5.0/bin/node");
         cmd.addArgument("/usr/local/lib/node_modules/appium/build/lib/appium.js");
@@ -244,11 +237,9 @@ public class CapabilitiesManager {
         cmd.addArgument("127.0.0.1");
         cmd.addArgument("--port");
         cmd.addArgument("4723");
-
         DefaultExecuteResultHandler handler = new DefaultExecuteResultHandler();
         DefaultExecutor executor = new DefaultExecutor();
         executor.setExitValue(1);
-
         try {
           executor.execute(cmd, handler);
           Thread.sleep(10000);
@@ -258,21 +249,15 @@ public class CapabilitiesManager {
            e.printStackTrace();
            System.out.println("Appium Server not Started");
          }
-
         Start Appium service - Fourth Method not working (Using node executable & appium executable path with static ip address & port) - Not Working
         String Appium_Node_Path="/usr/local/Cellar/node/18.5.0/bin/node";
         String Appium_JS_Path="/usr/local/lib/node_modules/appium/build/lib/main.js";
-
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
             .usingDriverExecutable(new File(Appium_Node_Path))
             .withAppiumJS(new File(Appium_JS_Path))
             .withIPAddress("127.0.0.1")
             .usingPort(4723));
         service.start();
-
         driver = new AppiumDriver(HttpClient.Factory.create("http://127.0.0.1:4723/wd/hub"), capabilities);
-
         //Use a higher value if your mobile elements take time to show up
         driver.manage().timeouts().wait(35);*/
-
-
