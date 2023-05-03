@@ -2,7 +2,7 @@ name: OpenKeyMobileApp
 environment: prod
 desired_capabilities:
   -   device: 192.168.1.13:5571
-      os_version: 13.0
+      os_version: 11.0
       appPackage: com.openkey.guest
       appActivity: com.openkey.guest.ui.activities.LauncherActivity
       orientation: PORTRAIT
