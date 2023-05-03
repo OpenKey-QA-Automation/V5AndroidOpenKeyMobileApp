@@ -78,12 +78,13 @@ public class TestRunner extends CapabilitiesManager {
 
     @AfterClass(alwaysRun = true)
     public void tearDownClass() {
-
-        if (driver.removeApp(appPackage)) {
-            System.out.println("App is uninstalled");
-        }
+//
+//        if (driver.removeApp(appPackage)) {
+//            System.out.println("App is uninstalled");
+//        }
         testNGCucumberRunner.finish();
     }
 }
+
 
 
