@@ -18,7 +18,7 @@ public class OpenKeyHomeScreen extends BaseScreen {
     /**Mobile Elements*/
     By openkeySplashLogo = By.id("com.openkey.guest:id/imgSplashLogo");
     By allowDeviceLocation = By.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button");
-    //By allowDeviceLocation = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]");
+    By allowDeviceLocation = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]");
     By allowAccessOfPhotos =  By.id("com.android.permissioncontroller:id/permission_allow_button");
     By allowToSendNotifications = By.id("com.openkey.guest:id/txtDialogPosBtn");
     By enterMobileNumberScreen = By.id("com.openkey.guest:id/txtMsg");
