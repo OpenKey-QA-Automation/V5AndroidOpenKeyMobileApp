@@ -93,7 +93,7 @@ public class OpenKeyLoginScreen extends BaseScreen {
     public void enterMobileNumber() {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(enterMobileNumberField)).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(enterMobileNumberField)).sendKeys("4697021039");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(enterMobileNumberField)).sendKeys("9728664283");
         allureReportingManager.stepsScreenshots();
     }
 
