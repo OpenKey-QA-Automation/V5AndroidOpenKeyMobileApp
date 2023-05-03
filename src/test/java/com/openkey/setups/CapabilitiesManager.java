@@ -2,7 +2,7 @@ package com.openkey.setups;
 
 import com.google.common.collect.ImmutableMap;
 import com.openkey.reporting.AllureReportingManager;
-import com.openkey.mqtt.MqttClientClass;
+import com.openkey.server.objects.MqttClientClass;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
