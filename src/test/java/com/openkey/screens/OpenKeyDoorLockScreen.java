@@ -119,19 +119,19 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
             }
 
         } catch (Exception e) {
-                //allureReportingManager.stepsScreenshots();
-            //if (driver.findElement(failedToOpenDoorLockError).isDisplayed()) {
+              /*allureReportingManager.stepsScreenshots();
+              if (driver.findElement(failedToOpenDoorLockError).isDisplayed()) {
                 lockOpenFailureCount = lockOpenFailureCount + 1;
                 if (lockOpenFailureCount == 1)
                     System.out.println("Door lock failed to open " + lockOpenFailureCount + " time");
                 else System.out.println("Door lock failed to open " + lockOpenFailureCount + " times");
                 counter = counter + 1;
-            System.out.println("Lock is not in range");
-                //String failedToOpenDoorLockErrorStr = wait.until(ExpectedConditions.visibilityOfElementLocated(failedToOpenDoorLockError)).getText();
-                //Assert.assertTrue(failedToOpenDoorLockErrorStr.toLowerCase().contains("unable to connect"));
-                //System.out.println("Door lock failed to open error prompt is displayed " + failedToOpenDoorLockErrorStr);
-                //wait.until(ExpectedConditions.visibilityOfElementLocated(failedToOpenDoorLockErrorPrompt)).click();
-                //allureReportingManager.stepsScreenshots();
+            
+                String failedToOpenDoorLockErrorStr = wait.until(ExpectedConditions.visibilityOfElementLocated(failedToOpenDoorLockError)).getText();
+                Assert.assertTrue(failedToOpenDoorLockErrorStr.toLowerCase().contains("unable to connect"));
+                System.out.println("Door lock failed to open error prompt is displayed " + failedToOpenDoorLockErrorStr);
+                wait.until(ExpectedConditions.visibilityOfElementLocated(failedToOpenDoorLockErrorPrompt)).click();
+                allureReportingManager.stepsScreenshots(); */
             }
         }
         mqttClient.moveToPosition(0);
@@ -176,7 +176,7 @@ public class OpenKeyDoorLockScreen extends BaseScreen {
         }
         System.out.println("Total number of attempts to open door lock " + numberOfTimes);
         System.out.println("Door Lock opened successfully " + lockOpenSuccessCount + " times");
-        System.out.println("Door Lock failed to opened " + lockOpenFailureCount + " times");
+        //System.out.println("Door Lock failed to opened " + lockOpenFailureCount + " times");
         allureReportingManager.stepsScreenshots();
     }
 
