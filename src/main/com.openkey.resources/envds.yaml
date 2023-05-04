@@ -1,13 +1,13 @@
 name: OpenKeyMobileApp
 environment: prod
 desired_capabilities:
-  -   device: 192.168.1.251:5573
+  -   device: 192.168.1.133:5583
       os_version: 13.0
       appPackage: com.openkey.guest
       appActivity: com.openkey.guest.ui.activities.LauncherActivity
       orientation: PORTRAIT
       type: Android
-      doorLockTotalCount: 200
+      doorLockTotalCount: 100
   -   device: iPhone 11
       os_version: 15.5
       appPackage: com.openkey.guest
