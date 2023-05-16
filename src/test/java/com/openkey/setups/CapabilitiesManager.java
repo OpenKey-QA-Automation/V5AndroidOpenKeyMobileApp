@@ -98,7 +98,7 @@ public class CapabilitiesManager {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-        //capabilities.setCapability(MobileCapabilityType.UDID, deviceName);
+        capabilities.setCapability(MobileCapabilityType.UDID, deviceName);
         /** Commented appPackage and appActivity because we've automated installing and launch app through app center*/
         //capabilities.setCapability("appPackage", appPackage);
         //capabilities.setCapability("appActivity", appActivity);
